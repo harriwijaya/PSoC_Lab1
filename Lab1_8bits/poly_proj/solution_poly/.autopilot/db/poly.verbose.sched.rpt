@@ -1,0 +1,184 @@
+
+
+================================================================
+== Vivado HLS Report for 'poly'
+================================================================
+* Date:           Mon Mar 23 19:42:08 2015
+
+* Version:        2013.4 (build date: Mon Dec 09 17:07:59 PM 2013)
+* Project:        poly_proj
+* Solution:       solution_poly
+* Product family: virtex7 virtex7_fpv6 
+* Target device:  xc7v585tffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      7.43|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    2|    2|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|Expression       |        -|      -|       -|       -|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|      -|       -|       -|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|       -|
+|Register         |        -|      -|       -|       -|
+|ShiftMemory      |        -|      -|       -|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|      0|       0|       0|
++-----------------+---------+-------+--------+--------+
+|Available        |     1590|   1260|  728400|  364200|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      0|       0|       0|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Shift register: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 2
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+* FSM state operations: 
+
+ <State 1>: 7.43ns
+ST_1: x_read [1/1] 0.00ns
+:3  %x_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %x) nounwind
+
+ST_1: tmp_3 [1/1] 0.00ns
+:4  %tmp_3 = shl i8 %x_read, 2
+
+ST_1: tmp_1 [1/1] 1.27ns
+:5  %tmp_1 = sub i8 %tmp_3, %x_read
+
+ST_1: tmp [1/1] 1.27ns
+:6  %tmp = add i8 %tmp_1, 2
+
+ST_1: tmp1 [1/1] 4.89ns
+:7  %tmp1 = mul i8 %tmp, %x_read
+
+
+ <State 2>: 2.50ns
+ST_2: stg_8 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i8 %x) nounwind, !map !0
+
+ST_2: stg_9 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i8* %y) nounwind, !map !6
+
+ST_2: stg_10 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @str) nounwind
+
+ST_2: tmp_2 [1/1] 2.50ns
+:8  %tmp_2 = add i8 %tmp1, 1
+
+ST_2: stg_12 [1/1] 0.00ns
+:9  call void @_ssdm_op_Write.ap_auto.i8P(i8* %y, i8 %tmp_2) nounwind
+
+ST_2: stg_13 [1/1] 0.00ns
+:10  ret void
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

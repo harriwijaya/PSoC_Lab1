@@ -1,0 +1,48 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/home/harri001/Lab1_8bits/poly_proj/solution_poly/sim/verilog
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+vapatb_poly_top
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+31
+IHInehKgVB@fX0TAo;LV<F3
+Z2 d/home/harri001/Lab1_8bits/poly_proj/solution_poly/sim/verilog
+w1427110930
+8poly.autotb.v
+Fpoly.autotb.v
+L0 30
+Z3 OE;L;10.2c;57
+Z4 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s85 0
+!s100 f`2H2@]Fz[49Hm1IklF]_0
+!s108 1427110931.347447
+!s107 poly.autotb.v|
+!s90 -work|work|poly.autotb.v|
+!i10b 1
+!i111 0
+vpoly
+R1
+r1
+!s85 0
+31
+IV<8a1bP0TS6GeUF>@S8g@0
+R2
+w1427110928
+8poly.v
+Fpoly.v
+L0 12
+R3
+R4
+!i10b 1
+!s100 7jbYU7eJ:bFnAS9CdFiVm2
+!s108 1427110931.370038
+!s107 poly.v|
+!s90 -work|work|poly.v|
+!i111 0

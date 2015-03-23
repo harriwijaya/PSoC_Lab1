@@ -1,0 +1,59 @@
+; ModuleID = '/home/harri001/Lab1_8bits/poly_proj/solution_poly/.autopilot/db/a.g.1.bc'
+target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@str = internal constant [5 x i8] c"poly\00"      ; [#uses=1 type=[5 x i8]*]
+
+; [#uses=0]
+define void @poly(i8 signext %x, i8* %y) nounwind uwtable {
+  call void (...)* @_ssdm_op_SpecTopModule([5 x i8]* @str) nounwind
+  call void @llvm.dbg.value(metadata !{i8 %x}, i64 0, metadata !13), !dbg !14 ; [debug line = 1:16] [debug variable = x]
+  call void @llvm.dbg.value(metadata !{i8* %y}, i64 0, metadata !15), !dbg !16 ; [debug line = 1:25] [debug variable = y]
+  %tmp.1 = mul i8 %x, 3, !dbg !17                 ; [#uses=1 type=i8] [debug line = 3:2]
+  %tmp = add i8 %tmp.1, 2                         ; [#uses=1 type=i8]
+  %tmp1 = mul i8 %tmp, %x                         ; [#uses=1 type=i8]
+  %tmp.2 = add i8 %tmp1, 1, !dbg !17              ; [#uses=1 type=i8] [debug line = 3:2]
+  store i8 %tmp.2, i8* %y, align 1, !dbg !17      ; [debug line = 3:2]
+  ret void, !dbg !19                              ; [debug line = 4:1]
+}
+
+; [#uses=2]
+declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
+
+; [#uses=1]
+declare void @_ssdm_op_SpecTopModule(...)
+
+; [#uses=0]
+declare i32 @_ssdm_op_SpecLoopBegin(...)
+
+; [#uses=0]
+declare i32 @_ssdm_op_SpecRegionBegin(...)
+
+; [#uses=0]
+declare i32 @_ssdm_op_SpecRegionEnd(...)
+
+; [#uses=0]
+declare i32 @_ssdm_op_SpecRegionEnd.restore(...)
+
+!llvm.dbg.cu = !{!0}
+
+!0 = metadata !{i32 786449, i32 0, i32 1, metadata !"/home/harri001/Lab1_8bits/poly_proj/solution_poly/.autopilot/db/lab1.pragma.2.c", metadata !"/home/harri001/Lab1_8bits", metadata !"clang version 3.1 ", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !1, metadata !3, metadata !1} ; [ DW_TAG_compile_unit ]
+!1 = metadata !{metadata !2}
+!2 = metadata !{i32 0}
+!3 = metadata !{metadata !4}
+!4 = metadata !{metadata !5}
+!5 = metadata !{i32 786478, i32 0, metadata !6, metadata !"poly", metadata !"poly", metadata !"", metadata !6, i32 1, metadata !7, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (i8, i8*)* @poly, null, null, metadata !11, i32 1} ; [ DW_TAG_subprogram ]
+!6 = metadata !{i32 786473, metadata !"lab1.c", metadata !"/home/harri001/Lab1_8bits", null} ; [ DW_TAG_file_type ]
+!7 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !8, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
+!8 = metadata !{null, metadata !9, metadata !10}
+!9 = metadata !{i32 786468, null, metadata !"char", null, i32 0, i64 8, i64 8, i64 0, i32 0, i32 6} ; [ DW_TAG_base_type ]
+!10 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 64, i64 64, i64 0, i32 0, metadata !9} ; [ DW_TAG_pointer_type ]
+!11 = metadata !{metadata !12}
+!12 = metadata !{i32 786468}                      ; [ DW_TAG_base_type ]
+!13 = metadata !{i32 786689, metadata !5, metadata !"x", metadata !6, i32 16777217, metadata !9, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!14 = metadata !{i32 1, i32 16, metadata !5, null}
+!15 = metadata !{i32 786689, metadata !5, metadata !"y", metadata !6, i32 33554433, metadata !10, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
+!16 = metadata !{i32 1, i32 25, metadata !5, null}
+!17 = metadata !{i32 3, i32 2, metadata !18, null}
+!18 = metadata !{i32 786443, metadata !5, i32 1, i32 28, metadata !6, i32 0} ; [ DW_TAG_lexical_block ]
+!19 = metadata !{i32 4, i32 1, metadata !18, null}

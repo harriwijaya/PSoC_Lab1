@@ -1,0 +1,87 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/home/harri001/Lab1_32bits/poly_proj/solution_poly/sim/verilog
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+vapatb_poly_top
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+31
+Ifo8aBDX;VNzzZn^lL90RL0
+Z2 d/home/harri001/Lab1_32bits/poly_proj/solution_poly/sim/verilog
+w1427110574
+8poly.autotb.v
+Fpoly.autotb.v
+L0 30
+Z3 OE;L;10.2c;57
+Z4 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s85 0
+!s100 eM]HRh:NJ0K4@LFgoMTLl3
+!s108 1427110574.866913
+!s107 poly.autotb.v|
+!s90 -work|work|poly.autotb.v|
+!i10b 1
+!i111 0
+vpoly
+R1
+r1
+31
+IelF^>boCLXDiYWbkmIn980
+R2
+Z5 w1427110571
+8poly.v
+Fpoly.v
+L0 12
+R3
+R4
+!s85 0
+!i10b 1
+!s100 =XIKOUhzFlXSLj`h5V33M0
+!s108 1427110574.934821
+!s107 poly.v|
+!s90 -work|work|poly.v|
+!i111 0
+vpoly_mul_32s_32s_32_3
+R1
+r1
+31
+IZozQBPlJnI4WK>4O1Z7<@2
+R2
+R5
+Z6 8poly_mul_32s_32s_32_3.v
+Z7 Fpoly_mul_32s_32s_32_3.v
+L0 34
+R3
+Z8 !s108 1427110574.892603
+Z9 !s107 poly_mul_32s_32s_32_3.v|
+Z10 !s90 -work|work|poly_mul_32s_32s_32_3.v|
+R4
+!s85 0
+!s100 YzZFc[ZZCA@:CO0kZcZB31
+!i10b 1
+!i111 0
+vpoly_mul_32s_32s_32_3_Mul3S_0
+R1
+r1
+!s85 0
+31
+IbJ3jHGg1=D4ofczIT28Fl1
+R2
+R5
+R6
+R7
+L0 11
+R3
+R8
+R9
+R10
+R4
+npoly_mul_32s_32s_32_3_@mul3@s_0
+!s100 6?QPj?J?md:MUk4OH_RL91
+!i10b 1
+!i111 0

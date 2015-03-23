@@ -1,0 +1,4 @@
+# vsim -c syn/verilog/poly.v testbench.v 
+# ** Error: (vsim-19) Failed to access library 'testbench' at "testbench".
+# No such file or directory. (errno = ENOENT)
+# Error loading design

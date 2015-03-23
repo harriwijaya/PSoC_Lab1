@@ -1,0 +1,127 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version: 2013.4
+  Build date: Mon Dec 09 17:07:59 PM 2013
+  Copyright (C) 2013 Xilinx Inc. All rights reserved.
+================================================================
+@I [LIC-101] Checked out feature [VIVADO_HLS]
+@I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2013.4/bin/unwrapped/lnx64.o/vivado_hls'
+            for user 'harri001' on host 'duckula' (Linux_x86_64 version 3.2.0-29-generic) on Mon Mar 23 19:42:07 SGT 2015
+            in directory '/home/harri001/Lab1_8bits'
+@I [HLS-10] Opening project '/home/harri001/Lab1_8bits/poly_proj'.
+@I [HLS-10] Adding test bench file 'tb.c' to the project.
+@I [HLS-10] Adding design file 'lab1.c' to the project.
+@I [HLS-10] Opening and resetting solution '/home/harri001/Lab1_8bits/poly_proj/solution_poly'.
+@I [HLS-10] Cleaning up the solution database.
+@I [HLS-10] Setting target device to 'xc7v585tffg1761-2'
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-10] Analyzing design file 'lab1.c' ... 
+@I [HLS-10] Importing test bench file 'tb.c' ... 
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-10] Starting code transformations ...
+@I [HLS-10] Checking synthesizability ...
+@I [HLS-111] Elapsed time: 0.39 seconds; current memory usage: 46.1 MB.
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-10] Synthesizing 'poly' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'poly' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 46.3 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'poly' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0 seconds; current memory usage: 46.3 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'poly' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'poly/x' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'poly/y' to 'ap_vld'.
+@I [RTGEN-500] Setting interface mode on function 'poly' to 'ap_ctrl_hs'.
+@I [RTGEN-100] Finished creating RTL model for 'poly'.
+@I [HLS-111] Elapsed time: 0.01 seconds; current memory usage: 46.4 MB.
+@I [HLS-10] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'poly'.
+@I [WVHDL-304] Generating RTL VHDL for 'poly'.
+@I [WVLOG-307] Generating RTL Verilog for 'poly'.
+@I [SIM-47] Using Modelsim for RTL simulation.
+@I [SIM-14] Instrumenting C test bench ...
+   Build using "/opt/Xilinx/Vivado_HLS/2013.4/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_poly.cpp
+   Compiling(apcc) lab1.c_pre.c.tb.c
+@I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2013.4/bin/unwrapped/lnx64.o/apcc'
+            for user 'harri001' on host 'duckula' (Linux_x86_64 version 3.2.0-29-generic) on Mon Mar 23 19:42:10 SGT 2015
+            in directory '/home/harri001/Lab1_8bits/poly_proj/solution_poly/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+@I [APCC-1] APCC is done.
+   Compiling(apcc) tb.c_pre.c.tb.c
+@I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2013.4/bin/unwrapped/lnx64.o/apcc'
+            for user 'harri001' on host 'duckula' (Linux_x86_64 version 3.2.0-29-generic) on Mon Mar 23 19:42:10 SGT 2015
+            in directory '/home/harri001/Lab1_8bits/poly_proj/solution_poly/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+@I [APCC-1] APCC is done.
+   Generating cosim.tv.exe
+@I [SIM-302] Generating test vectors ... 
+result is 34pass....@I [SIM-333] Generating C post check test bench ...
+@I [SIM-12] Generating RTL test bench ...
+@I [SIM-323] Starting verilog simulation. 
+@I [SIM-15] Starting Modelsim ...
+Reading pref.tcl 
+
+# 10.2c
+
+# do cosim.modelsim.scr 
+# 
+#     set fl [open ".exit.err" w]
+#     puts $fl "Elaboration errors in executing modelsim simulator"
+#     close $fl
+#     quit
+# 
+# /clibs
+# lin64
+# 1
+# /clibs/questa/10.2c/lin64/lib
+WARNING: There is no IP libs for this version of ModelSim. If you may use cosim with IP, please make sure the IP libs have been pre-compiled.
+# Copying /opt/Mentor/modeltech/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/Mentor/modeltech/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# Model Technology ModelSim SE vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module apatb_poly_top
+# 
+# Top level modules:
+# 	apatb_poly_top
+# Model Technology ModelSim SE vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module poly
+# 
+# Top level modules:
+# 	poly
+# vsim -L work -suppress 6630 -t 10ps -wlf poly.wlf -novopt apatb_poly_top 
+# //  ModelSim SE 10.2c Jul 18 2013 Linux 3.2.0-29-generic
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Refreshing /home/harri001/Lab1_8bits/poly_proj/solution_poly/sim/verilog/work.apatb_poly_top
+# Loading work.apatb_poly_top
+# Refreshing /home/harri001/Lab1_8bits/poly_proj/solution_poly/sim/verilog/work.poly
+# Loading work.poly
+# 1
+# ** Note: $finish    : poly.autotb.v(273)
+#    Time: 165400 ps  Iteration: 0  Instance: /apatb_poly_top
+@I [SIM-316] Starting C post checking ...
+result is 34pass....@I [SIM-1000] *** C/RTL co-simulation finished: PASS ***
+@I [HLS-112] Total elapsed time: 4.576 seconds; peak memory usage: 46.4 MB.
+@I [LIC-101] Checked in feature [VIVADO_HLS]

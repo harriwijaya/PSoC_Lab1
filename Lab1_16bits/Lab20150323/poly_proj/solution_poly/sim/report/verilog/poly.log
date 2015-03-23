@@ -1,0 +1,75 @@
+@I [SIM-47] Using Modelsim for RTL simulation.
+@I [SIM-14] Instrumenting C test bench ...
+   Build using "/opt/Xilinx/Vivado_HLS/2013.4/lnx64/tools/gcc/bin/g++"
+   Compiling apatb_poly.cpp
+   Compiling(apcc) lab1.c_pre.c.tb.c
+@I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2013.4/bin/unwrapped/lnx64.o/apcc'
+            for user 'harri001' on host 'duckula' (Linux_x86_64 version 3.2.0-29-generic) on Mon Mar 23 19:32:25 SGT 2015
+            in directory '/home/harri001/Lab20150323/poly_proj/solution_poly/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+@I [APCC-1] APCC is done.
+   Compiling(apcc) tb.c_pre.c.tb.c
+@I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2013.4/bin/unwrapped/lnx64.o/apcc'
+            for user 'harri001' on host 'duckula' (Linux_x86_64 version 3.2.0-29-generic) on Mon Mar 23 19:32:25 SGT 2015
+            in directory '/home/harri001/Lab20150323/poly_proj/solution_poly/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+@I [APCC-1] APCC is done.
+   Generating cosim.tv.exe
+@I [SIM-302] Generating test vectors ... 
+@I [SIM-333] Generating C post check test bench ...
+@I [SIM-12] Generating RTL test bench ...
+@I [SIM-323] Starting verilog simulation. 
+@I [SIM-15] Starting Modelsim ...
+@I [SIM-316] Starting C post checking ...
+result is 209pass....
+Reading pref.tcl 
+
+# 10.2c
+
+# do cosim.modelsim.scr 
+# 
+#     set fl [open ".exit.err" w]
+#     puts $fl "Elaboration errors in executing modelsim simulator"
+#     close $fl
+#     quit
+# 
+# /clibs
+# lin64
+# 1
+# /clibs/questa/10.2c/lin64/lib
+WARNING: There is no IP libs for this version of ModelSim. If you may use cosim with IP, please make sure the IP libs have been pre-compiled.
+# Copying /opt/Mentor/modeltech/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/Mentor/modeltech/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# Model Technology ModelSim SE vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module apatb_poly_top
+# 
+# Top level modules:
+# 	apatb_poly_top
+# Model Technology ModelSim SE vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling module poly
+# 
+# Top level modules:
+# 	poly
+# vsim -L work -suppress 6630 -t 10ps -wlf poly.wlf -novopt apatb_poly_top 
+# //  ModelSim SE 10.2c Jul 18 2013 Linux 3.2.0-29-generic
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Refreshing /home/harri001/Lab20150323/poly_proj/solution_poly/sim/verilog/work.apatb_poly_top
+# Loading work.apatb_poly_top
+# Refreshing /home/harri001/Lab20150323/poly_proj/solution_poly/sim/verilog/work.poly
+# Loading work.poly
+# 1
+# ** Note: $finish    : poly.autotb.v(266)
+#    Time: 155400 ps  Iteration: 0  Instance: /apatb_poly_top
+result is 209pass....
+@I [SIM-1000] *** C/RTL co-simulation finished: PASS ***

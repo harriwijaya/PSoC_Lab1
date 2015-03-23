@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:26:26 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Mon Mar 23 19:58:29 2015
+# Process ID: 22988
+# Log file: /home/harri001/Lab1_32bits/vivado.log
+# Journal file: /home/harri001/Lab1_32bits/vivado.jou
+#-----------------------------------------------------------
+Attempting to get a license: Implementation
+Feature available: Implementation
+Loading parts and site information from /opt/Xilinx/Vivado/2013.4/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/Vivado/2013.4/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+source hls_pr.tcl
+# set outputDir ./pr
+# file mkdir $outputDir
+# read_verilog [glob poly_proj/solution_poly/syn/verilog/*.v]
+# read_xdc ./clk.xdc
+ERROR: [Common 17-275] File does not exist [/home/harri001/Lab1_32bits/clk.xdc]
+
+    while executing
+"read_xdc ./clk.xdc"
+    (file "hls_pr.tcl" line 5)
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 23 19:58:38 2015...
